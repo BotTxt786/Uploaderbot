@@ -1,10 +1,10 @@
 import os import subprocess import aiofiles from pyrogram import Client, filters from pyrogram.types import Message
 
-API_ID = 12345678  # 🔁 Replace with your actual API ID API_HASH = "your_api_hash_here"  # 🔁 Replace with your actual API hash BOT_TOKEN = "your_bot_token_here"  # 🔁 Replace with your actual bot token
+API_ID = 21702672  # 🔁 Replace with your actual API ID API_HASH = "your_api_hash_here"  # 🔁 Replace with your actual API hash BOT_TOKEN = "your_bot_token_here"  # 🔁 Replace with your actual bot token
 
 bot = Client("classplus_uploader_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-🔧 Function to download and send video from .m3u8 link
+"🔧 Function to download and send video from .m3u8 link"
 
 async def download_and_send_video(link, chat_id, bot, index): try: output_file = f"video_{index}.mp4" cmd = f'ffmpeg -i "{link}" -c copy -loglevel quiet "{output_file}"' subprocess.run(cmd, shell=True)
 
